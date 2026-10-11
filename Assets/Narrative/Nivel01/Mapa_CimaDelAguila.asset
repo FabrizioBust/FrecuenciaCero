@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4400000000000000000000000000007, type: 3}
+  m_Name: Mapa_CimaDelAguila
+  m_EditorClassIdentifier:
+  title: "CIMA DEL ÁGUILA — MAPA DE REFERENCIA"
+  body: "UBICACIONES\n\nRetén forestal\nCamino de servicio\nGenerador auxiliar\nTorre de transmisión\nCabaña del guardabosques\n\nRUTA DE REFERENCIA\nRetén forestal → Camino de servicio → Generador auxiliar → Torre de transmisión.\n\nLeo: «Buscaré el antiguo camino de servicio. El generador debería estar cerca».\n\nEsquema orientativo: la ilustración no asigna coordenadas ni marca destinos jugables. La posición de la cabaña del guardabosques queda por confirmar."
+  illustration: {fileID: 21340008, guid: e33c0000000000000000000000000100, type: 3}

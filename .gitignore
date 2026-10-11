@@ -1,0 +1,85 @@
+# Unity: basado en https://github.com/github/gitignore/blob/main/Unity.gitignore
+# Conserva Assets, sus .meta, Packages y ProjectSettings.
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+/.utmp/
+*.log
+
+# Archivos generados y ajustes personales del IDE.
+.vs/
+/.vscode/
+.idea/
+.gradle/
+.consulo/
+ExportedObj/
+*.csproj
+*.unityproj
+*.sln
+*.slnx
+*.suo
+*.user
+*.userprefs
+*.DotSettings.user
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+*.tmp
+*.bak
+*.blend1
+*.blend1.meta
+sysinfo.txt
+mono_crash.*
+crashlytics-build.properties
+
+# Contenido regenerable de Unity.
+/[Aa]ssets/Plugins/Editor/JetBrains*/
+/ServerData/
+/[Aa]ssets/StreamingAssets/aa*/
+/[Aa]ssets/AddressableAssetsData/link.xml*
+/[Aa]ssets/AddressableAssetsData/*/*.bin*
+/[Aa]ssets/Addressables_Temp*/
+/[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Flow/UnitOptions.db*
+/[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Core/Property Providers*
+/UIElementsSchema/
+/[Aa]ssets/[Ss]ceneDependencyCache*
+
+# Copias locales de trabajo: se conservan en disco.
+/Docs/Backups/
+/Docs/Nivel01_Bosque.original.unity.txt
+# Validaciones históricas que dependen de esas copias locales.
+/Docs/Validation/
+# Notas locales con rutas personales del equipo.
+/Docs/Etapa3A_Assets.md
+/Docs/Etapa3C_PromptAtlas.txt
+
+# Archivos personales del sistema y credenciales locales.
+.DS_Store
+Thumbs.db
+Desktop.ini
+.env
+.env.*
+!.env.example
+/.aws/
+/.ssh/
+/.agents/
+/.codex/
+*.pfx
+*.p12
+*.keystore
+*.jks
+credentials.json
+service-account*.json

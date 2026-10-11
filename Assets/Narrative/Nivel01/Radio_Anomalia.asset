@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4400000000000000000000000000006, type: 3}
+  m_Name: Radio_Anomalia
+  m_EditorClassIdentifier:
+  lines:
+  - speaker: "RADIO"
+    text: "Krrrr... Leo..."
+    soundCue: "radio_static"
+  - speaker: "LEO"
+    text: "¿Central? ¿Me reciben?"
+    soundCue: ""
+  - speaker: "VOZ DESCONOCIDA"
+    text: "No salgas todavía."
+    soundCue: "unknown_voice"
+  - speaker: "LEO"
+    text: "¿Quién habla?"
+    soundCue: ""
+  - speaker: "VOZ DESCONOCIDA"
+    text: "Soy Leo."
+    soundCue: "unknown_voice"
+  - speaker: "RADIO"
+    text: "Krrrrrrrr..."
+    soundCue: "radio_static"
+  - speaker: "LEO"
+    text: "...Eso no ha sido gracioso."
+    soundCue: ""

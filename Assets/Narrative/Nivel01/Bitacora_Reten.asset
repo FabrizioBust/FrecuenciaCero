@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4400000000000000000000000000007, type: 3}
+  m_Name: Bitacora_Reten
+  m_EditorClassIdentifier:
+  title: "BITÁCORA DEL RETÉN — 17 DE OCTUBRE DE 1986"
+  body: "«La interferencia volvió a escucharse anoche. No proviene de la torre, o al menos eso aseguran los técnicos.\n\nA las 02:17 recibimos una transmisión desde la frecuencia de mantenimiento.\n\nEra mi voz.\n\nDecía que no abriera la puerta.\n\nLo extraño es que yo estaba solo y la radio llevaba tres días desconectada de la corriente.\n\nHoy encontré huellas frente al retén. Son iguales a las mías»."
+  illustration: {fileID: 0}
