@@ -45243,7 +45243,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6600000000000000000000000000001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  decoratedBounds: {x: -35, y: -23, width: 70, height: 46}
+  decoratedBounds:
+    serializedVersion: 2
+    x: -35
+    y: -23
+    width: 70
+    height: 46
   edgePadding: 0.125
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

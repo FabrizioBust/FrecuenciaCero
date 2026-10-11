@@ -844,7 +844,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e33c0000000000000000000000000004, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomBounds: {x: -5.5, y: -4.5, width: 11, height: 9}
+  roomBounds:
+    serializedVersion: 2
+    x: -5.5
+    y: -4.5
+    width: 11
+    height: 9
 --- !u!1 &1800320001
 GameObject:
   m_ObjectHideFlags: 0
