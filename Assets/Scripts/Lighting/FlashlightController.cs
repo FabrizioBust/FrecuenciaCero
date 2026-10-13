@@ -16,11 +16,13 @@ namespace FrecuenciaCero
         private InputAction toggleAction;
         private InputAction pointerAction;
         private float angularVelocity;
+        private SurvivalPlayer survival;
         public bool IsOn { get; private set; }
 
         private void Awake()
         {
             beam = GetComponent<Light2D>();
+            survival = GetComponentInParent<SurvivalPlayer>();
             if (worldCamera == null) worldCamera = Camera.main;
             IsOn = startsOn;
             // Local actions use the project's existing Input System without editing shared bindings.
@@ -40,11 +42,13 @@ namespace FrecuenciaCero
 
         private void Update()
         {
+            if (survival != null && survival.Cinematic) return;
             if (toggleAction.WasPressedThisFrame()) SetOn(!IsOn);
         }
 
         private void LateUpdate()
         {
+            if (survival != null && survival.Cinematic) return;
             if (worldCamera == null || pointerAction.controls.Count == 0) return;
             Vector2 screenPosition = pointerAction.ReadValue<Vector2>();
             Ray ray = worldCamera.ScreenPointToRay(screenPosition);

@@ -23,6 +23,9 @@ namespace FrecuenciaCero
         [SerializeField, InspectorName("Area de bancos")] private Rect bankArea = new Rect(-32f, -24f, 64f, 48f);
         [SerializeField, Tooltip("Usar el río/sendero del retén. Desactivado en la zona del generador.")]
         private bool useExteriorDensity = true;
+        [SerializeField, Tooltip("Usar el sendero y los claros del bosque abandonado, sin alterar la niebla del retén.")]
+        private bool useAbandonedForestDensity;
+        [SerializeField] private bool useCabinTrailDensity;
 
         [Header("Referencias preparadas en la escena")]
         [SerializeField] private SpriteRenderer ambient = null;
@@ -138,7 +141,7 @@ namespace FrecuenciaCero
                 renderer.transform.localRotation = Quaternion.Euler(0f, 0f, bank.angle);
                 float envelope = (float)ForestFogField.LifeFade(bank.age / bank.duration);
                 Vector3 world = renderer.transform.position;
-                float zone = useExteriorDensity ? (float)ForestFogField.ZoneDensity(world.x, world.y) :
+                float zone = useCabinTrailDensity ? CabinTrailField.FogDensity(world) : useAbandonedForestDensity ? AbandonedForestField.FogDensity(world) : useExteriorDensity ? (float)ForestFogField.ZoneDensity(world.x, world.y) :
                     Mathf.Lerp(.35f, 1f, Mathf.SmoothStep(0f, 1f, ((float)GeneratorTerrainField.PathDistance(world.x, world.y) - .4f) / 1.7f));
                 float variation = Mathf.Lerp(1f, bank.opacity, variationIntensity);
                 tint = Color.Lerp(fogColor, bankTint, .45f);

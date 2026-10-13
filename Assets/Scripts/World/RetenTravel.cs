@@ -14,7 +14,7 @@ namespace FrecuenciaCero
         private static bool flashlightOn;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
-        private static void Reset()
+        public static void Reset()
         {
             IsLoading = false;
             pendingScene = pendingSpawn = null;

@@ -60,6 +60,7 @@ namespace FrecuenciaCero
 
         public bool TryStartAnomaly()
         {
+            if (movement != null && movement.IsBlocked) return false;
             if (allowGeneratorEvents && !IsOpen && !RetenTravel.IsLoading &&
                 RetenMission.Session.GeneratorAnomalyReady && RetenMission.GeneratorStartedAt >= 0f &&
                 Time.time - RetenMission.GeneratorStartedAt >= generatorAnomalyDelay)

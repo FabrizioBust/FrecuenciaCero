@@ -1,0 +1,574 @@
+fileFormatVersion: 2
+guid: 892408b26cdf30046b49755e9baa1d27
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5832594975609147695
+    second: MobiliarioCabana_Atlas_0
+  - first:
+      213: -156227768199523897
+    second: MobiliarioCabana_Atlas_1
+  - first:
+      213: 2585613358313014235
+    second: MobiliarioCabana_Atlas_2
+  - first:
+      213: -8398370049837489186
+    second: MobiliarioCabana_Atlas_3
+  - first:
+      213: -8233986219841376504
+    second: MobiliarioCabana_Atlas_4
+  - first:
+      213: 1649124740355160919
+    second: MobiliarioCabana_Atlas_5
+  - first:
+      213: -6901470419166259343
+    second: MobiliarioCabana_Atlas_6
+  - first:
+      213: -1901690206412672652
+    second: MobiliarioCabana_Atlas_7
+  - first:
+      213: -8402372684250875306
+    second: MobiliarioCabana_Atlas_8
+  - first:
+      213: 6857757213025720925
+    second: MobiliarioCabana_Atlas_9
+  - first:
+      213: 867276772282852215
+    second: MobiliarioCabana_Atlas_10
+  - first:
+      213: 905247835220922734
+    second: MobiliarioCabana_Atlas_11
+  - first:
+      213: 2067470512315250715
+    second: MobiliarioCabana_Atlas_12
+  - first:
+      213: -2455433563288500473
+    second: MobiliarioCabana_Atlas_13
+  - first:
+      213: -7219208508228596244
+    second: MobiliarioCabana_Atlas_14
+  - first:
+      213: 231202160882998293
+    second: MobiliarioCabana_Atlas_15
+  - first:
+      213: 2318637250211278826
+    second: MobiliarioCabana_Atlas_16
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 1
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: MobiliarioCabana_Atlas_0
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 945
+        width: 270
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2159e75a3a81f050800000000000000
+      internalID: 5832594975609147695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MobiliarioCabana_Atlas_1
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 1148
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c15a6c2ca7f4ddf0800000000000000
+      internalID: -156227768199523897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MobiliarioCabana_Atlas_2
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 1148
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd380c476a1f1e320800000000000000
+      internalID: 2585613358313014235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MobiliarioCabana_Atlas_3
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 1153
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed32827afeef27b80800000000000000
+      internalID: -8398370049837489186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MobiliarioCabana_Atlas_4
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 1146
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80fa4e898210bbd80800000000000000
+      internalID: -8233986219841376504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MobiliarioCabana_Atlas_5
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 937
+        width: 321
+        height: 317
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75b7d23c63ed2e610800000000000000
+      internalID: 1649124740355160919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MobiliarioCabana_Atlas_6
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 306
+        width: 355
+        height: 948
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1779ab5283d0930a0800000000000000
+      internalID: -6901470419166259343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MobiliarioCabana_Atlas_7
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 941
+        width: 218
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 471fee535d6db95e0800000000000000
+      internalID: -1901690206412672652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MobiliarioCabana_Atlas_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 628
+        width: 301
+        height: 323
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65af7c4bf86c46b80800000000000000
+      internalID: -8402372684250875306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MobiliarioCabana_Atlas_9
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 634
+        width: 287
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5a554ee9d5ab2f50800000000000000
+      internalID: 6857757213025720925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MobiliarioCabana_Atlas_10
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 636
+        width: 290
+        height: 285
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 773eddd11af290c00800000000000000
+      internalID: 867276772282852215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MobiliarioCabana_Atlas_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 351
+        height: 619
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e61d8042c16109c00800000000000000
+      internalID: 905247835220922734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MobiliarioCabana_Atlas_12
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 19
+        width: 246
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b18352e1a7121bc10800000000000000
+      internalID: 2067470512315250715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MobiliarioCabana_Atlas_13
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 43
+        width: 249
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7070e920f2c8cedd0800000000000000
+      internalID: -2455433563288500473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MobiliarioCabana_Atlas_14
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 147
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ced8e8b5c1830db90800000000000000
+      internalID: -7219208508228596244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MobiliarioCabana_Atlas_15
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 144
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51cdbbee325653300800000000000000
+      internalID: 231202160882998293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MobiliarioCabana_Atlas_16
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 11
+        width: 276
+        height: 616
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aefe4dd5b447d2020800000000000000
+      internalID: 2318637250211278826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      MobiliarioCabana_Atlas_0: 5832594975609147695
+      MobiliarioCabana_Atlas_1: -156227768199523897
+      MobiliarioCabana_Atlas_10: 867276772282852215
+      MobiliarioCabana_Atlas_11: 905247835220922734
+      MobiliarioCabana_Atlas_12: 2067470512315250715
+      MobiliarioCabana_Atlas_13: -2455433563288500473
+      MobiliarioCabana_Atlas_14: -7219208508228596244
+      MobiliarioCabana_Atlas_15: 231202160882998293
+      MobiliarioCabana_Atlas_16: 2318637250211278826
+      MobiliarioCabana_Atlas_2: 2585613358313014235
+      MobiliarioCabana_Atlas_3: -8398370049837489186
+      MobiliarioCabana_Atlas_4: -8233986219841376504
+      MobiliarioCabana_Atlas_5: 1649124740355160919
+      MobiliarioCabana_Atlas_6: -6901470419166259343
+      MobiliarioCabana_Atlas_7: -1901690206412672652
+      MobiliarioCabana_Atlas_8: -8402372684250875306
+      MobiliarioCabana_Atlas_9: 6857757213025720925
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

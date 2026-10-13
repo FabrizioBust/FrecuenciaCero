@@ -12,6 +12,7 @@ namespace FrecuenciaCero
         public const float BatteryWidth = 208f;
         public const float BatteryHeight = 62f;
         public const float ObjectiveWidth = 320f;
+        public const float InventoryBottom = 196f;
         public static float Scale => SizeMultiplier * Mathf.Max(.75f, Mathf.Min(Screen.width / ReferenceWidth, Screen.height / ReferenceHeight));
         // Narrow previews place the objective below the battery instead of overlapping it.
         public static bool StackObjective(float width) => width < BatteryWidth + ObjectiveWidth + Margin * 3f;

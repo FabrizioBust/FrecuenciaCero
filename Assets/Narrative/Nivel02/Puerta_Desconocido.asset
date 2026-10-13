@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4400000000000000000000000000006, type: 3}
+  m_Name: Puerta_Desconocido
+  m_EditorClassIdentifier: Assembly-CSharp::FrecuenciaCero.DialogueSequence
+  lines:
+  - speaker: DESCONOCIDO
+    text: "\xBFVienes de la estaci\xF3n?"
+    soundCue: stranger_station
+  - speaker: LEO
+    text: "Soy el t\xE9cnico de telecomunicaciones. \xBFQui\xE9n est\xE1 ah\xED?"
+    soundCue: leo_technician
+  - speaker: DESCONOCIDO
+    text: "Entonces... todav\xEDa no saben lo que pas\xF3."
+    soundCue: stranger_unsaid

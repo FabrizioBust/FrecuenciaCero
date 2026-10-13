@@ -34,7 +34,7 @@ namespace FrecuenciaCero
             GUI.depth = -20;
             try
             {
-                float x = HudLayout.Margin, y = HudLayout.Margin;
+                float x = HudLayout.Margin, y = HudLayout.Margin + 36f;
                 float barWidth = HudLayout.BatteryWidth - 24f;
                 DrawRect(new Rect(x, y, HudLayout.BatteryWidth, HudLayout.BatteryHeight), new Color(.025f, .043f, .045f, .9f));
                 DrawRect(new Rect(x, y, HudLayout.BatteryWidth, 1f), new Color(.28f, .37f, .33f, .8f));

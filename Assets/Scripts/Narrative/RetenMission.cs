@@ -17,11 +17,12 @@ namespace FrecuenciaCero
             if (Session.CollectFuse()) FuseNoticeUntil = Time.unscaledTime + 3f;
         }
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
-        private static void ResetSession()
+        public static void ResetSession()
         {
             Session = new MissionProgress();
             GeneratorStartedAt = -1f;
             FuseNoticeUntil = 0f;
+            NoiseEvents.ResetFootsteps();
         }
     }
 }

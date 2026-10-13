@@ -12,6 +12,7 @@ namespace FrecuenciaCero
         private InteractionProbe probe;
         private LeoMovement movement;
         private InputAction interact, confirm, cancel, toggleHud;
+        public WorldInteraction FocusTarget { get; private set; }
         private readonly InteractionButtonGate eGate = new InteractionButtonGate();
         private readonly InteractionButtonGate enterGate = new InteractionButtonGate();
         private readonly InteractionButtonGate escapeGate = new InteractionButtonGate();
@@ -50,6 +51,7 @@ namespace FrecuenciaCero
             bool enter = enterGate.Sample(confirm.IsPressed(), confirm.WasPressedThisFrame());
             bool escape = escapeGate.Sample(cancel.IsPressed(), cancel.WasPressedThisFrame());
             director.SetPrompt(null);
+            FocusTarget = null;
             if (RetenTravel.IsLoading) return;
             if (director.IsOpen)
             {
@@ -59,7 +61,7 @@ namespace FrecuenciaCero
             }
             // Events have priority over doors, including the frame a document closes.
             if (director.TryStartAnomaly()) return;
-            if (movement != null && !movement.enabled) return;
+            if (movement != null && (!movement.enabled || movement.IsBlocked)) return;
             WorldInteraction nearest = null;
             float nearestDistance = float.PositiveInfinity;
             foreach (WorldInteraction target in targets)
@@ -71,6 +73,7 @@ namespace FrecuenciaCero
                 nearest = target;
             }
             if (nearest == null) return;
+            FocusTarget = nearest;
             director.SetPrompt(nearest.Prompt);
             if (!e) return;
             director.SetPrompt(null);

@@ -8,6 +8,7 @@ namespace FrecuenciaCero
         public const int Width = 2304, Height = 1792, PPU = 32;
         private static readonly double[,] Road = {{-15,-7},{-11,-5.5},{-7,-4},{-3,-2.5},{1,-.5},{4,2},{5,4.5}};
         private static readonly double[,] Storage = {{-3,-2.5},{-5,0},{-6.5,2.5},{-7,5.5}};
+        private static readonly double[,] South = {{-3,-2.5},{-1,-6},{1,-10},{.5,-15},{-1,-19}};
         private static double Clamp(double n) { return Math.Max(0, Math.Min(1, n)); }
         private static double Smooth(double n) { n = Clamp(n); return n*n*(3-2*n); }
         private static double Mix(double a,double b,double t) { return a+(b-a)*t; }
@@ -29,7 +30,8 @@ namespace FrecuenciaCero
             }
             return Math.Sqrt(best);
         }
-        public static double PathDistance(double x,double y) { return Math.Min(Distance(x,y,Road),Distance(x,y,Storage)); }
+        public static double SouthPathDistance(double x,double y) => Distance(x,y,South);
+        public static double PathDistance(double x,double y) { return Math.Min(SouthPathDistance(x,y), Math.Min(Distance(x,y,Road),Distance(x,y,Storage))); }
         public static uint Pixel(int px,int py)
         {
             double x=-36+(px+.5)/PPU,y=-28+(py+.5)/PPU;

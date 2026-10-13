@@ -12,7 +12,7 @@ namespace FrecuenciaCero
         [SerializeField] private float interactionRange = 1.2f;
         public override string Prompt => RetenMission.Session.GeneratorRepaired ? "E: examinar generador" :
             RetenMission.Session.GeneratorExamined && RetenMission.Session.HasFuse ? "E: instalar fusible" : "E: examinar generador";
-        public override bool IsAvailable(InteractionProbe player) => RetenMission.Session.SupervisorCompleted &&
+        public override bool IsAvailable(InteractionProbe player) => RetenMission.Session.GeneratorAvailable &&
             player.CanReach(InteractionPoint, interactionRange, Vector2.down, 1.2f);
         public override void Interact(NarrativeDirector director)
         {

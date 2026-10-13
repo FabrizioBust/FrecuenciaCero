@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4400000000000000000000000000006, type: 3}
+  m_Name: Accidente_Descubrimiento
+  m_EditorClassIdentifier: 
+  lines:
+  - speaker: "LEO"
+    text: "No... no puede ser. ¡Mi camioneta!"
+    soundCue: ""
+  - speaker: "SUPERVISOR"
+    text: "Leo, ¿me recibes? ¿Qué ocurrió?"
+    soundCue: ""
+  - speaker: "LEO"
+    text: "Un árbol cayó sobre mi vehículo. Está destrozado y la carretera está bloqueada."
+    soundCue: ""
+  - speaker: "SUPERVISOR"
+    text: "¿Estás herido?"
+    soundCue: ""
+  - speaker: "LEO"
+    text: "No. Estaba dentro del retén cuando ocurrió. Pero ahora no tengo cómo regresar."
+    soundCue: ""
+  - speaker: "SUPERVISOR"
+    text: "Entendido. Mantén la calma. Necesitamos recuperar la comunicación con la estación."
+    soundCue: ""
+  - speaker: "SUPERVISOR"
+    text: "Hay un generador auxiliar más adelante. Si consigues encenderlo, podremos comprobar si existe otra ruta de salida."
+    soundCue: ""
+  - speaker: "LEO"
+    text: "De acuerdo. Iré a buscarlo."
+    soundCue: ""
