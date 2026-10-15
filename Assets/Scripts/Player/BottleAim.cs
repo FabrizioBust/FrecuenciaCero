@@ -18,13 +18,20 @@ namespace FrecuenciaCero
         private void Awake() { player = GetComponent<SurvivalPlayer>(); feet = GetComponent<Collider2D>(); }
         private void LateUpdate()
         {
+            if (GameplayPause.InputsBlocked) return;
             var keyboard = Keyboard.current; var mouse = Mouse.current;
             if (!player.CanAct || RetenMission.Session.Survival.Bottles <= 0) { player.Aiming = false; return; }
-            if (!IsAiming && keyboard != null && keyboard.qKey.wasPressedThisFrame)
+            if (!IsAiming && keyboard != null && keyboard.qKey.wasPressedThisFrame &&
+                (mouse == null || !mouse.rightButton.isPressed))
             { player.Aiming = true; GetComponent<LeoMovement>().IsBlocked = true; GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero; return; }
             if (!IsAiming) return;
-            if (keyboard != null && keyboard.escapeKey.wasPressedThisFrame || mouse != null && mouse.rightButton.wasPressedThisFrame)
-            { player.Aiming = false; return; }
+            if (mouse != null && mouse.rightButton.wasPressedThisFrame)
+            {
+                player.Aiming = false; InRange = false;
+                // Remove only the aiming lock; narrative, death and travel still own control.
+                if (player.CanAct) GetComponent<LeoMovement>().IsBlocked = false;
+                return;
+            }
             if (mouse == null || Camera.main == null) return;
             Ray ray = Camera.main.ScreenPointToRay(mouse.position.ReadValue());
             if (Mathf.Abs(ray.direction.z) < .0001f) return;

@@ -11,7 +11,7 @@ namespace FrecuenciaCero
         private void Start(){noise=player.GetComponent<MovementNoise>();aim=player.GetComponent<BottleAim>();director=FindAnyObjectByType<NarrativeDirector>();}
         private void OnGUI()
         {
-            if(player==null)return;
+            if(GameplayPause.IsPaused||player==null)return;
             if(style==null)
             {
                 style=new GUIStyle(GUI.skin.label){fontSize=13,wordWrap=true,padding=new RectOffset(0,0,0,0)};
@@ -57,7 +57,7 @@ namespace FrecuenciaCero
                     float level=noise!=null?noise.Level:0;
                     for(int i=0;i<8;i++)Rect(new Rect(x+25+i*16,y+15,12,9),i<Mathf.CeilToInt(level*8)?Color.Lerp(new Color(.8f,.73f,.48f),new Color(.85f,.22f,.2f),level):new Color(.15f,.2f,.18f));
                 }
-                if(Time.unscaledTime<SurvivalPlayer.NoticeUntil && (director==null||!director.IsOpen))
+                if(GameplayPause.PresentationTime<SurvivalPlayer.NoticeUntil && (director==null||!director.IsOpen))
                 {GUI.color=Color.white;GUI.Label(new Rect(width*.2f,height-112,width*.6f,40),SurvivalPlayer.Notice,centered);}
             }
             if(aim!=null&&aim.IsAiming&&Camera.main!=null)

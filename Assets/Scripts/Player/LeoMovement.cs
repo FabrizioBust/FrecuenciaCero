@@ -35,6 +35,7 @@ namespace FrecuenciaCero
 
         private void Update()
         {
+            if (GameplayPause.InputsBlocked) { direction = Vector2.zero; IsRunning = false; return; }
             var keyboard = Keyboard.current;
             IsRunning = !IsBlocked && keyboard != null && (keyboard.leftShiftKey.isPressed || keyboard.rightShiftKey.isPressed);
             direction = IsBlocked ? Vector2.zero : Vector2.ClampMagnitude(move.ReadValue<Vector2>(), 1f);

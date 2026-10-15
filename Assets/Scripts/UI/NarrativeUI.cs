@@ -26,6 +26,7 @@ namespace FrecuenciaCero
         }
         private void Update()
         {
+            if (GameplayPause.IsPaused) return;
             bool dialogueOpen = director != null && director.CurrentLine != null;
             dialogueOpacity = Mathf.MoveTowards(dialogueOpacity, dialogueOpen ? 1 : 0, Time.unscaledDeltaTime / .18f);
             documentOpacity = Mathf.MoveTowards(documentOpacity, director != null && director.Document != null ? 1 : 0, Time.unscaledDeltaTime / .18f);
@@ -40,13 +41,13 @@ namespace FrecuenciaCero
             int revision = RetenMission.Session.ObjectiveRevision;
             if (objectiveRevision == revision) return;
             objectiveRevision = revision;
-            notificationUntil = Time.unscaledTime + objectiveNotificationSeconds;
+            notificationUntil = GameplayPause.PresentationTime + objectiveNotificationSeconds;
         }
         public void ResetDocumentScroll() { documentScroll = Vector2.zero; }
 
         private void OnGUI()
         {
-            if (director == null) return;
+            if (GameplayPause.IsPaused || director == null) return;
             EnsureStyles();
             Matrix4x4 oldMatrix = GUI.matrix;
             Color oldColor = GUI.color;
@@ -87,7 +88,7 @@ namespace FrecuenciaCero
                 Rect panel = new Rect(width - panelWidth - HudLayout.Margin, y, panelWidth, panelHeight);
                 DrawPanel(panel);
                 GUI.Label(new Rect(panel.x + 12, panel.y + 7, textWidth, 15),
-                    Time.unscaledTime < notificationUntil ? "OBJETIVO ACTUALIZADO" : "OBJETIVO", objectiveHeader);
+                    GameplayPause.PresentationTime < notificationUntil ? "OBJETIVO ACTUALIZADO" : "OBJETIVO", objectiveHeader);
                 GUI.Label(new Rect(panel.x + 12, panel.y + 26, textWidth, textHeight), RetenMission.Session.CurrentObjective, objectiveBody);
             }
             finally { GUI.matrix = previousMatrix; }
@@ -98,7 +99,7 @@ namespace FrecuenciaCero
         }
         private void DrawFuseNotice()
         {
-            if (Time.unscaledTime >= RetenMission.FuseNoticeUntil) return;
+            if (GameplayPause.PresentationTime >= RetenMission.FuseNoticeUntil) return;
             Matrix4x4 previous = GUI.matrix;
             float scale = HudLayout.Scale;
             float width = Screen.width / scale;

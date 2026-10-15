@@ -14,7 +14,7 @@ namespace FrecuenciaCero
         }
         public static void CollectFuse()
         {
-            if (Session.CollectFuse()) FuseNoticeUntil = Time.unscaledTime + 3f;
+            if (Session.CollectFuse()) FuseNoticeUntil = GameplayPause.PresentationTime + 3f;
         }
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
         public static void ResetSession()

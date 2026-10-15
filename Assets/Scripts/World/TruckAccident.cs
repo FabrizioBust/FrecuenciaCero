@@ -25,6 +25,7 @@ namespace FrecuenciaCero
         }
         private void Update()
         {
+            if (GameplayPause.IsPaused) return;
             MissionProgress state = RetenMission.Session;
             if (visible != state.TreeFallen) Refresh();
             if (!visible || state.WreckDiscovered || director == null || director.IsOpen ||

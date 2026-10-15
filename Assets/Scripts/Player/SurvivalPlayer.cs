@@ -21,12 +21,12 @@ namespace FrecuenciaCero
         public bool Dead => RetenMission.Session.Survival.Health <= 0;
         public bool Cinematic { get; set; }
         public bool Aiming { get; set; }
-        public bool CanAct => !Dead && !Cinematic && !RetenTravel.IsLoading && movement.enabled && (director == null || !director.IsOpen);
+        public bool CanAct => !GameplayPause.InputsBlocked && !Dead && !Cinematic && !RetenTravel.IsLoading && movement.enabled && (director == null || !director.IsOpen);
         public float DeathFade { get; private set; }
         public float HealPulse => Mathf.Clamp01((healedUntil - Time.time) / .55f);
         public static string Notice { get; private set; }
         public static float NoticeUntil { get; private set; }
-        public static void Notify(string message) { Notice = message; NoticeUntil = Time.unscaledTime + 3f; }
+        public static void Notify(string message) { Notice = message; NoticeUntil = GameplayPause.PresentationTime + 3f; }
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
         static void ResetNotice() { Notice = null; NoticeUntil = 0; }
         private void Awake()
@@ -37,6 +37,7 @@ namespace FrecuenciaCero
         }
         private void Update()
         {
+            if (GameplayPause.InputsBlocked) return;
             movement.IsBlocked = Dead || Cinematic || Aiming;
             // Healing is visual only: it grants no extra invulnerability and never masks a damage flash.
             sprite.color = Time.time < immuneUntil ? Color.Lerp(originalColor, new Color(1,.25f,.25f), Mathf.PingPong(Time.time * 14, 1)) :
@@ -62,7 +63,7 @@ namespace FrecuenciaCero
         }
         public bool TakeDamage(int amount = 1)
         {
-            if (Cinematic || Dead || Time.time < immuneUntil || !RetenMission.Session.Survival.Damage(amount)) return false;
+            if (GameplayPause.IsPaused || Cinematic || Dead || Time.time < immuneUntil || !RetenMission.Session.Survival.Damage(amount)) return false;
             immuneUntil = Time.time + invulnerability;
             if (Dead) { Aiming = false; movement.IsBlocked = true; GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero; }
             return true;

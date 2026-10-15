@@ -42,13 +42,13 @@ namespace FrecuenciaCero
 
         private void Update()
         {
-            if (survival != null && survival.Cinematic) return;
+            if (GameplayPause.InputsBlocked || survival != null && survival.Cinematic) return;
             if (toggleAction.WasPressedThisFrame()) SetOn(!IsOn);
         }
 
         private void LateUpdate()
         {
-            if (survival != null && survival.Cinematic) return;
+            if (GameplayPause.InputsBlocked || survival != null && survival.Cinematic) return;
             if (worldCamera == null || pointerAction.controls.Count == 0) return;
             Vector2 screenPosition = pointerAction.ReadValue<Vector2>();
             Ray ray = worldCamera.ScreenPointToRay(screenPosition);

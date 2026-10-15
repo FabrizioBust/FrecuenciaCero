@@ -44,6 +44,7 @@ namespace FrecuenciaCero
 
         private void Update()
         {
+            if (GameplayPause.InputsBlocked) { director.SetPrompt(null); FocusTarget = null; return; }
             // TAB only changes drawing. Process it even while a narrative interface is open.
             if (tabGate.Sample(toggleHud.IsPressed(), toggleHud.WasPressedThisFrame())) HudVisibility.Toggle();
             // Sample all keys once. Each branch returns after consuming this frame.

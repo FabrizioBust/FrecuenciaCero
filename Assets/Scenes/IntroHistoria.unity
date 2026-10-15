@@ -13808,6 +13808,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1618061569}
   - component: {fileID: 1618061568}
+  - component: {fileID: 1618061570}
   m_Layer: 0
   m_Name: "Introducci\xF3n \u2014 secuencia de 40 segundos"
   m_TagString: Untagged
@@ -13850,13 +13851,13 @@ MonoBehaviour:
   speaker: {fileID: 1210879277}
   subtitle: {fileID: 659596457}
   skipProgress: {fileID: 1430132593}
-  engineLoop: {fileID: 0}
+  engineLoop: {fileID: 8300000, guid: a6cff27fb8b94a54a8fb18bb475f72b4, type: 3}
   roadLoop: {fileID: 0}
   windLoop: {fileID: 0}
   forestLoop: {fileID: 0}
   supervisorVoice: {fileID: 0}
   leoVoice: {fileID: 0}
-  engineStop: {fileID: 0}
+  engineStop: {fileID: 8300000, guid: 9c691b35eaa79574ebf21fd8840f3a14, type: 3}
   engineSource: {fileID: 1243098119}
   roadSource: {fileID: 672760130}
   windSource: {fileID: 1170407255}
@@ -13882,6 +13883,18 @@ Transform:
   - {fileID: 997929745}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1618061570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1618061567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40e0073ca3ad18043a62935343c1d51b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FrecuenciaCero.IntroVehicleSoundMarker
 --- !u!1 &1635357068
 GameObject:
   m_ObjectHideFlags: 0

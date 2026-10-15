@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eb15c6c4e82e974ab5eb32af981d8d3, type: 3}
+  m_Name: PaletaSonidos
+  m_EditorClassIdentifier: Assembly-CSharp::FrecuenciaCero.GameSoundPalette
+  dirt:
+  - {fileID: 8300000, guid: e3c386b119995cf42be5c7457274fc2b, type: 3}
+  - {fileID: 8300000, guid: 7869b542998218e4888a02afd52669d0, type: 3}
+  - {fileID: 8300000, guid: a944bb5cb9d61bd41928fc736eb9aee6, type: 3}
+  - {fileID: 8300000, guid: 18806f5f2f4cac84f83e7adaa332aaf7, type: 3}
+  grass:
+  - {fileID: 8300000, guid: 5a9d483bd6b9f2d4ab5e440b57835be0, type: 3}
+  - {fileID: 8300000, guid: 5b6affebf61610144aaefc16668be8b6, type: 3}
+  - {fileID: 8300000, guid: c47384e2ba6d7024094ba3281ded1d94, type: 3}
+  - {fileID: 8300000, guid: 4f17c3f2ac9defc4d8302e6e73089b6f, type: 3}
+  - {fileID: 8300000, guid: 748b7a7a8f3f5cb40939e0f02ae0f71e, type: 3}
+  - {fileID: 8300000, guid: 692dda79b7225244fad377a6461e4f47, type: 3}
+  retenWood:
+  - {fileID: 8300000, guid: 56ab135bf145dbe4c9f1d900ede16e3d, type: 3}
+  - {fileID: 8300000, guid: b10dd38fcc694be459d805f4c516f2ae, type: 3}
+  - {fileID: 8300000, guid: d205a3bb6c6f68c4185681b6f2c7687e, type: 3}
+  - {fileID: 8300000, guid: 972c41a2ba47caa41950bd166b44f466, type: 3}
+  - {fileID: 8300000, guid: aa508df57018b5042b6ebe4ce7f77a03, type: 3}
+  - {fileID: 8300000, guid: 1383d47ee4cf3434fad8521394a91b3e, type: 3}
+  - {fileID: 8300000, guid: 7d09c165ccca81045b03dacd522deae8, type: 3}
+  - {fileID: 8300000, guid: fee8dbe35536a37429885f9896309a9a, type: 3}
+  cabinWood:
+  - {fileID: 8300000, guid: f04c550fe9fe491469a6aedd6c6266b8, type: 3}
+  - {fileID: 8300000, guid: 9c22cab8650089e4fbbc7758588ad398, type: 3}
+  - {fileID: 8300000, guid: 7d8d133f341f9e8419abfee517152c18, type: 3}
+  - {fileID: 8300000, guid: 0487229222dab964fa787cf522c4f1fe, type: 3}
+  - {fileID: 8300000, guid: 9b2724c6e14886443b2b9884f58e1c79, type: 3}
+  motorRunning: {fileID: 8300000, guid: a6cff27fb8b94a54a8fb18bb475f72b4, type: 3}
+  motorStopping: {fileID: 8300000, guid: 9c691b35eaa79574ebf21fd8840f3a14, type: 3}
+  truckDoor: {fileID: 8300000, guid: d9372f98e5c410c4e81b8d05a25c88aa, type: 3}
+  river: {fileID: 8300000, guid: c97906a6b6d648c44832dcfe37da8dd4, type: 3}
+  radioStatic:
+  - {fileID: 8300000, guid: afb6b499da6c91c4daf91ce3f0561d96, type: 3}
+  - {fileID: 8300000, guid: 664dec6130f0b4343bd39184550276cc, type: 3}
+  radioCut: {fileID: 8300000, guid: 89ef51bd4cfea0245a0fc1cebcc996b6, type: 3}

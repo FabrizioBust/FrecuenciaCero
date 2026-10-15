@@ -27,6 +27,7 @@ namespace FrecuenciaCero
         }
         private void Update()
         {
+            if (GameplayPause.IsPaused) return;
             if (broken)
             {
                 artwork.color = new Color(.65f,.8f,.7f,Mathf.Clamp01(1-(Time.time-brokenAt)*2));

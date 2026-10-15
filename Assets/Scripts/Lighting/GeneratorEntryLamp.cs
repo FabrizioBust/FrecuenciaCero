@@ -20,6 +20,7 @@ namespace FrecuenciaCero
         private void Start() { Set(RetenMission.Session.GeneratorRepaired || !RetenMission.Session.EntryLampFailureStarted ? 1 : 0); }
         private void Update()
         {
+            if (GameplayPause.IsPaused) return;
             var progress = RetenMission.Session;
             if (progress.GeneratorRepaired) { IsFlickering = false; Set(1); return; }
             if (IsFlickering)

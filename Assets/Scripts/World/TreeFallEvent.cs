@@ -20,6 +20,7 @@ namespace FrecuenciaCero
         private float[] intensities;
         private bool running, projectionChanged;
         private float shakeUntil;
+        public bool IsRunning => running;
 
         private void Awake()
         {
@@ -39,7 +40,8 @@ namespace FrecuenciaCero
         }
         private void Update()
         {
-            if (running || director == null || director.IsOpen || RetenTravel.IsLoading) return;
+            source.volume = MenuPreferences.EffectsVolume;
+            if (GameplayPause.IsPaused || running || director == null || director.IsOpen || RetenTravel.IsLoading) return;
             MissionProgress state = RetenMission.Session;
             if (state.TreeFallen)
             {

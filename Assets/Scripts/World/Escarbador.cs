@@ -39,7 +39,7 @@ namespace FrecuenciaCero
         private void OnDisable(){NoiseEvents.Emitted-=Hear;if(body!=null)body.linearVelocity=Vector2.zero;}
         public void Hear(NoiseEvent noise)
         {
-            if(!activated||frozen||noise.Intensity<sensitivity||noise.Kind==NoiseKind.Soil||
+            if(GameplayPause.IsPaused||!activated||frozen||noise.Intensity<sensitivity||noise.Kind==NoiseKind.Soil||
                 Vector2.Distance(transform.position,noise.Position)>noise.Radius)return;
             LastHeard=noise.Position;LastKind=noise.Kind;
             bool step=noise.Kind==NoiseKind.Walk||noise.Kind==NoiseKind.Run;

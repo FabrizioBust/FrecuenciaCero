@@ -25,6 +25,9 @@ namespace FrecuenciaCero
         private bool shownTutorial;
         private AudioSource soilAudio;
         private AudioClip rustle;
+        private SmoothCameraFollow encounterFollow;
+        private bool encounterFollowWasEnabled;
+        private Vector3 soilRestScale;
         public bool IsPlaying => playing;
         public bool IsEnding => ending;
         public int TutorialPage => page;
@@ -41,6 +44,7 @@ namespace FrecuenciaCero
         }
         private void Update()
         {
+            if(GameplayPause.IsPaused)return;
             panelOpacity=Mathf.MoveTowards(panelOpacity,string.IsNullOrEmpty(title)?0:1,Time.unscaledDeltaTime/.18f);
             if(!string.IsNullOrEmpty(title)){shownTitle=title;shownText=text;shownTutorial=page>0;}
             if(leo.Dead||RetenTravel.IsLoading)return;
@@ -64,12 +68,14 @@ namespace FrecuenciaCero
             playing=true;leo.Cinematic=true;leo.GetComponent<LeoMovement>().IsBlocked=true;
             leo.GetComponent<Rigidbody2D>().linearVelocity=Vector2.zero;creature.Frozen=true;
             Camera camera=Camera.main;var follow=camera.GetComponent<SmoothCameraFollow>();bool oldFollow=follow.enabled;follow.enabled=false;
+            encounterFollow=follow;encounterFollowWasEnabled=oldFollow;
             Vector3 origin=camera.transform.position;
             Vector2 heard=NoiseEvents.LastFootstep.Radius>0?NoiseEvents.LastFootstep.Position:(Vector2)leo.transform.position+Vector2.up;
             // The interrupted steps stay behind Leo; the enemy never reads his transform for detection.
             if(Vector2.Distance(heard,leo.transform.position)<1.2f)heard+=Vector2.up*2f;
             Rustle(movingSoil.position);
             Vector3 scale=movingSoil.localScale;
+            soilRestScale=scale;
             for(float t=0;t<1;t+=Time.deltaTime){movingSoil.localScale=scale*(1+Mathf.Sin(t*19)*.035f);yield return null;}
             movingSoil.localScale=scale;
             yield return Pan(camera,new Vector3(creature.transform.position.x,creature.transform.position.y,-10),1.2f);
@@ -84,7 +90,7 @@ namespace FrecuenciaCero
             page=2;title="ESPERA A QUE SE ALEJE";text="Cuando deje de buscarte, continúa con cuidado.";
             yield return ContinuePage();
             page=0;title=text=null;RetenMission.Session.FinishEncounter();creature.Frozen=false;
-            leo.Cinematic=false;leo.GetComponent<LeoMovement>().IsBlocked=false;playing=false;
+            leo.Cinematic=false;leo.GetComponent<LeoMovement>().IsBlocked=false;playing=false;encounterFollow=null;
         }
         private IEnumerator ContinuePage()
         {
@@ -102,13 +108,33 @@ namespace FrecuenciaCero
         }
         private void OnGUI()
         {
+            if(GameplayPause.IsPaused)return;
             var matrix=GUI.matrix;var color=GUI.color;int oldDepth=GUI.depth;float scale=NarrativePanels.Scale;
             GUI.matrix=Matrix4x4.Scale(Vector3.one*scale);GUI.depth=-400;float width=Screen.width/scale,height=Screen.height/scale;
             if(panelOpacity>0 && !ending)
                 NarrativePanels.Message(width,height,shownTitle,shownText,shownText,shownTutorial?"E / ENTER — continuar":null,shownTutorial,panelOpacity);
             GUI.matrix=matrix;GUI.color=color;GUI.depth=oldDepth;
         }
-        private void OnDisable(){if(leo!=null)leo.Cinematic=false;}
+        private void OnDisable()
+        {
+            if(!playing)return;
+            StopAllCoroutines();
+            if(encounterFollow!=null)encounterFollow.enabled=encounterFollowWasEnabled;
+            encounterFollow=null;
+            if(movingSoil!=null)movingSoil.localScale=soilRestScale;
+            if(leo!=null)
+            {
+                leo.Cinematic=false;
+                leo.GetComponent<LeoMovement>().IsBlocked=false;
+                leo.GetComponent<Rigidbody2D>().linearVelocity=Vector2.zero;
+            }
+            // Match the existing scene-reload recovery: an interrupted encounter resumes
+            // from its completed checkpoint rather than keeping a stopped coroutine alive.
+            var session=RetenMission.Session;
+            if(session.EncounterStarted&&!session.EncounterCompleted)session.FinishEncounter();
+            if(creature!=null)creature.ResetAtHideout();
+            playing=false;page=0;title=text=shownTitle=shownText=null;panelOpacity=0;
+        }
         private void OnDestroy(){if(rustle!=null)Destroy(rustle);}
     }
 }
